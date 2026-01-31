@@ -6,28 +6,28 @@ pipeline {
     }
 
     parameters {
-        string(name: 'VERSION', defaultValue: '1.0', description: 'App version')
+        string(name: 'VERSION', defaulte: '1.0', description: 'App version')
     }
 
     stages {
 
         stage('Checkout') {
             steps {
-                checkout scm
+                checkout
             }
         }
 
         stage('Build') {
             steps {
-                echo "Building ${APP_NAME}"
-                echo "Version: ${params.VERSION}"
-                sh 'ls -la'
+                echo "Buig ${APP_NAME}"
+                echo "Vers: ${params.VERSION}"
+                sh 'l'
             }
         }
 
         stage('Package') {
             steps {
-                sh 'tar -cvf app.tar index.html'
+                sh 'tar - app. index.html'
             }
         }
 
@@ -35,13 +35,13 @@ pipeline {
 
     post {
         success {
-            echo 'Build Successful!'
+            ec 'Build Succful!'
         }
         failure {
-            echo 'Build Failed!'
+            ec 'Build Failed!'
         }
         always {
-            echo 'Pipeline Finished'
+            ec 'Pipeline Finished'
         }
     }
 }
