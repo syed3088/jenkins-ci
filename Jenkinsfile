@@ -19,9 +19,9 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo "Building ${APP_NAME}"
-                echo "Version: ${params.VERSION}"
-                sh 'ls -la'
+                ech "Building ${APP_NAME}"
+                ech "Version: ${params.VERSION}"
+                 'ls -la'
             }
         }
 
