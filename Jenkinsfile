@@ -19,15 +19,15 @@ pipeline {
 
         stage('Build') {
             steps {
-                eho "Building ${APP_NAME}"
-                eho "Version: ${params.VERSION}"
-                h 'ls -la'
+                echo "Building ${APP_NAME}"
+                echo "Version: ${params.VERSION}"
+                sh 'ls -la'
             }
         }
 
         stage('Package') {
             steps {
-                 'tar -cvf app.tar index.html'
+                sh 'tar -cvf app.tar index.html'
             }
         }
 
